@@ -1,5 +1,5 @@
 remote_theme: just-the-docs/just-the-docs
-logo: '/assets/pharma_box_logo.png'
+logo: 'https://pharma-box.github.io/docs/assets/pharma_box_logo.png'
 url: 'https://pharma-box.github.io'
 
 color_scheme: default

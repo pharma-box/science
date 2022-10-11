@@ -2,7 +2,11 @@
 
 Jupyter Notebooks and code used for analyzing survey response data and research
 
-[Markdown as code](./scrubb-data.md)
+## Notebooks
+
+### [scrubb-data](./scrubb-data.md)
+
+Scrubs responses from [this user survey]() so that data can be shared and analyzed without exposing information about respondents.
 
 ## Development
 

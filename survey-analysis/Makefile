@@ -2,6 +2,8 @@
 
 .PHONY: help
 
+.DEFAULT: help
+
 help:
 	@echo "---- Help ---------------------"
 	@echo "Having Trouble? Make sure you have pip, and python3 installed!"

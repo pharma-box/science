@@ -13,3 +13,18 @@ code {
 code span {
   font-family: 'SFMono-Regular', menlo, consolas, monospace;
 }
+
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  background: transparent;
+}

@@ -11,7 +11,8 @@ help:
 	@echo "install  ....... installs all the required dependencies using pip"
 	@echo "start    ....... starts all notebooks"
 	@echo "list     ....... list active notebooks"
-	@echo "down     .......  shutdown notebooks on 8888"
+	@echo "down     ....... shutdown notebooks on 8888"
+	@echo "markdown ....... generates markdown files from python notebooks"
 
 
 install:
@@ -29,6 +30,10 @@ list:
 down:
 	@echo "Shutting down notebooks on 8888.... 👇"
 	jupyter notebook stop 8888
+
+markdown:
+	jupyter nbconvert ./patient-analysis.ipynb --to markdown --output patient-analysis.md
+	jupyter nbconvert ./scrubb-data.ipynb --to markdown --output scrubb-data.md
 
 
 

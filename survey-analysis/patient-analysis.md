@@ -1,15 +1,15 @@
 # Patient Analysis
-
 This notebook is responsible for analyzing the "patient" survey responses that have been collected from this [survey](https://forms.gle/axv3s55uio7RmGZT6)
 
 ## Questions that we want to answer
 
 - We want to know how likely it is that users will use a pickup box for prescriptions based on their age range
-  - We want to know if our proposed solution will have a high customer acceptance rate
+    - We want to know if our proposed solution will have a high customer acceptance rate
 - We want to know what patients believe is the mean acceptable amount of time to wait to pick up prescriptions
-  - We want to have a benchmark by which we can determine if our solution meets the needs of customers.
+    -  We want to have a benchmark by which we can determine if our solution meets the needs of customers.
 
 Import dependencies
+
 
 ```python
 # import dependencies
@@ -32,12 +32,13 @@ def disp(df):
         df (dataframe): Dataframe
     """
     display(HTML(df.to_html()))
-
-
+    
+    
 
 ```
 
 Load patient survery data into dataframe
+
 
 ```python
 file_path = "./output/patient-survey-data.csv"
@@ -50,6 +51,7 @@ if display_all_data:
 ```
 
 ## We want to know how likely it is that users will use a pickup box for prescriptions based on their age range
+
 
 ```python
 ages = ["Under 21", "21 - 35", "35 - 40", "40 - 64", "65 +"]
@@ -88,6 +90,7 @@ plt.ylabel("liklihood")
 
 ```
 
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -102,46 +105,50 @@ plt.ylabel("liklihood")
   <tbody>
     <tr>
       <th>Very likely</th>
-      <td>60</td>
-      <td>425</td>
-      <td>162</td>
+      <td>65</td>
+      <td>438</td>
+      <td>165</td>
       <td>57</td>
       <td>3</td>
     </tr>
     <tr>
       <th>Somewhat likely</th>
       <td>48</td>
-      <td>430</td>
-      <td>226</td>
-      <td>66</td>
-      <td>7</td>
+      <td>441</td>
+      <td>233</td>
+      <td>70</td>
+      <td>8</td>
     </tr>
     <tr>
       <th>Likely</th>
-      <td>44</td>
-      <td>446</td>
-      <td>261</td>
-      <td>84</td>
+      <td>45</td>
+      <td>479</td>
+      <td>270</td>
+      <td>89</td>
       <td>6</td>
     </tr>
     <tr>
       <th>Not very likely</th>
       <td>35</td>
-      <td>198</td>
-      <td>58</td>
-      <td>41</td>
-      <td>2</td>
+      <td>199</td>
+      <td>59</td>
+      <td>45</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>Never</th>
       <td>10</td>
       <td>33</td>
       <td>10</td>
-      <td>13</td>
-      <td>5</td>
+      <td>16</td>
+      <td>7</td>
     </tr>
   </tbody>
 </table>
+
+
+
+
 
     Text(0, 0.5, 'liklihood')
 
@@ -150,27 +157,63 @@ plt.ylabel("liklihood")
 
     <Figure size 432x288 with 0 Axes>
 
-![svg](./charts/output_7_3.svg)
+
+
+    
+![svg](patient-analysis_files/patient-analysis_7_3.svg)
+    
+
+
 
     <Figure size 432x288 with 0 Axes>
 
-![svg](./charts/output_7_5.svg)
+
+
+    
+![svg](patient-analysis_files/patient-analysis_7_5.svg)
+    
+
+
 
     <Figure size 432x288 with 0 Axes>
 
-![svg](./charts/output_7_7.svg)
+
+
+    
+![svg](patient-analysis_files/patient-analysis_7_7.svg)
+    
+
+
 
     <Figure size 432x288 with 0 Axes>
 
-![svg](./charts/output_7_9.svg)
+
+
+    
+![svg](patient-analysis_files/patient-analysis_7_9.svg)
+    
+
+
 
     <Figure size 432x288 with 0 Axes>
 
-![svg](./charts/output_7_11.svg)
+
+
+    
+![svg](patient-analysis_files/patient-analysis_7_11.svg)
+    
+
+
 
     <Figure size 432x288 with 0 Axes>
 
-![svg](./charts/output_7_13.svg)
+
+
+    
+![svg](patient-analysis_files/patient-analysis_7_13.svg)
+    
+
+
 
 ```python
 df_probs = df_counts
@@ -189,9 +232,10 @@ disp(df_probs)
 plt.figure()
 ax = df_probs.plot.bar(figsize=(10, 6))
 plt.suptitle("Liklihood Responses by Age")
-plt.xlabel("Probability")
-plt.ylabel("liklihood")
+plt.ylabel("Probability")
+plt.xlabel("liklihood")
 ```
+
 
 <table border="1" class="dataframe">
   <thead>
@@ -208,60 +252,70 @@ plt.ylabel("liklihood")
   <tbody>
     <tr>
       <th>Very likely</th>
-      <td>0.304569</td>
-      <td>0.277415</td>
-      <td>0.225941</td>
-      <td>0.218391</td>
-      <td>0.130435</td>
-      <td>0.259151</td>
+      <td>0.320197</td>
+      <td>0.275472</td>
+      <td>0.223881</td>
+      <td>0.205776</td>
+      <td>0.111111</td>
+      <td>0.257052</td>
     </tr>
     <tr>
       <th>Somewhat likely</th>
-      <td>0.243655</td>
-      <td>0.280679</td>
-      <td>0.315202</td>
-      <td>0.252874</td>
-      <td>0.304348</td>
-      <td>0.284407</td>
+      <td>0.236453</td>
+      <td>0.277358</td>
+      <td>0.316147</td>
+      <td>0.252708</td>
+      <td>0.296296</td>
+      <td>0.282087</td>
     </tr>
     <tr>
       <th>Likely</th>
-      <td>0.223350</td>
-      <td>0.291123</td>
-      <td>0.364017</td>
-      <td>0.321839</td>
-      <td>0.260870</td>
-      <td>0.308199</td>
+      <td>0.221675</td>
+      <td>0.301258</td>
+      <td>0.366350</td>
+      <td>0.321300</td>
+      <td>0.222222</td>
+      <td>0.313822</td>
     </tr>
     <tr>
       <th>Not very likely</th>
-      <td>0.177665</td>
-      <td>0.129243</td>
-      <td>0.080893</td>
-      <td>0.157088</td>
-      <td>0.086957</td>
-      <td>0.122255</td>
+      <td>0.172414</td>
+      <td>0.125157</td>
+      <td>0.080054</td>
+      <td>0.162455</td>
+      <td>0.111111</td>
+      <td>0.120240</td>
     </tr>
     <tr>
       <th>Never</th>
-      <td>0.050761</td>
-      <td>0.021540</td>
-      <td>0.013947</td>
-      <td>0.049808</td>
-      <td>0.217391</td>
-      <td>0.025988</td>
+      <td>0.049261</td>
+      <td>0.020755</td>
+      <td>0.013569</td>
+      <td>0.057762</td>
+      <td>0.259259</td>
+      <td>0.026798</td>
     </tr>
   </tbody>
 </table>
 
-    Text(0, 0.5, 'liklihood')
+
+
+
+
+    Text(0.5, 0, 'liklihood')
 
 
 
 
     <Figure size 432x288 with 0 Axes>
 
-![svg](./charts/output_8_3.svg)
+
+
+    
+![svg](patient-analysis_files/patient-analysis_8_3.svg)
+    
+
+
 
 ```python
 plt.figure()
@@ -271,6 +325,9 @@ plt.xlabel("Probability")
 plt.ylabel("Density")
 ```
 
+
+
+
     Text(0, 0.5, 'Density')
 
 
@@ -278,13 +335,20 @@ plt.ylabel("Density")
 
     <Figure size 432x288 with 0 Axes>
 
-![svg](./charts/output_9_2.svg)
+
+
+    
+![svg](patient-analysis_files/patient-analysis_9_2.svg)
+    
+
 
 ## We want to know what patients believe is the mean acceptable amount of time to wait to pick up prescriptions
 
 So we can have a benchmark by which we can determine if our solution meets the needs of customers.
 
+
 Correlate time ranges to numerical values
+
 
 ```python
 df_times = pd.DataFrame()
@@ -344,9 +408,11 @@ df_mean_times = pd.DataFrame(
 
 Show Table with `min` and `max` desired times
 
+
 ```python
 disp(df_mean_times)
 ```
+
 
 <table border="1" class="dataframe">
   <thead>
@@ -359,23 +425,25 @@ disp(df_mean_times)
   <tbody>
     <tr>
       <th>Ideal Reported Wait Times</th>
-      <td>6.598</td>
-      <td>9.198</td>
+      <td>6.561</td>
+      <td>9.146</td>
     </tr>
     <tr>
       <th>Actual Reported Wait times</th>
-      <td>7.767</td>
-      <td>10.578</td>
+      <td>7.675</td>
+      <td>10.472</td>
     </tr>
     <tr>
       <th>Difference</th>
-      <td>1.169</td>
-      <td>1.380</td>
+      <td>1.114</td>
+      <td>1.326</td>
     </tr>
   </tbody>
 </table>
 
+
 Investigate the desity of responses
+
 
 ```python
 df_times = df_times.astype(int)
@@ -390,21 +458,44 @@ plt.figure()
 df_times.plot.box(figsize=(12, 6))
 ```
 
+
+
+
     <AxesSubplot: >
 
-![svg](./charts/output_16_1.svg)
+
+
+
+    
+![svg](patient-analysis_files/patient-analysis_16_1.svg)
+    
+
+
 
     <Figure size 432x288 with 0 Axes>
 
-![svg](./charts/output_16_3.svg)
+
+
+    
+![svg](patient-analysis_files/patient-analysis_16_3.svg)
+    
+
+
 
     <Figure size 432x288 with 0 Axes>
 
-![svg](./charts/output_16_5.svg)
+
+
+    
+![svg](patient-analysis_files/patient-analysis_16_5.svg)
+    
+
+
 
 ```python
 
 ```
+
 
 ```python
 

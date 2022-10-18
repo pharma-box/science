@@ -1,0 +1,8 @@
+numpy
+matplotlib
+scipy
+pandas
+pathlib
+jupyterlab
+notebook
+voila

@@ -14,7 +14,7 @@ Data analysis for [this user survey](https://docs.google.com/forms/d/e/1FAIpQLSd
 
 ## Development
 
-The easiest way to get started is to run the `Makefile`. Available commands can be seen by typing `make` in the current directory `/science/survey-analysis`. You need to have [Python](https://www.python.org/downloads/) and [CMake](https://cmake.org/) installed. `CMake` should be installed by default if you are using a `*.nix` operating system.
+The easiest way to get started is to run the `Makefile`. Available commands can be seen by typing `make` in the current directory `/science/patient-survey-analysis`. You need to have [Python](https://www.python.org/downloads/) and [CMake](https://cmake.org/) installed. `CMake` should be installed by default if you are using a `*.nix` operating system.
 
 **Available Commands**:
 

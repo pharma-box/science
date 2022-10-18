@@ -4,4 +4,4 @@ Data Science and Analytics for PharamBox 🧬 📦 💊
 
 ## Experiments 🔬
 
-- [Survey Analysis ✨](./survey-analysis/README.md)
+- [Patient Survey Analysis ✨](./patient-survey-analysis/README.md)

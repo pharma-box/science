@@ -231,9 +231,9 @@ for age in ages:
 disp(df_probs)
 plt.figure()
 ax = df_probs.plot.bar(figsize=(10, 6))
-plt.suptitle("Liklihood Responses by Age")
+plt.suptitle("Likelihood Responses by Age")
 plt.ylabel("Probability")
-plt.xlabel("liklihood")
+plt.xlabel("Likelihood")
 ```
 
 
@@ -302,7 +302,7 @@ plt.xlabel("liklihood")
 
 
 
-    Text(0.5, 0, 'liklihood')
+    Text(0.5, 0, 'Likelihood')
 
 
 
